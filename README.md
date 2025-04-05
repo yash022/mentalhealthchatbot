@@ -16,7 +16,13 @@ manage their emotional well-being.
 ## Screenshots
 
 <!-- OUR CHATBOT : HEAVEN -->
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://github.com/user-attachments/assets/4a085abd-1b8a-4d3a-ac23-1a5530ebb20e)
+
+![image](https://github.com/user-attachments/assets/76fdae01-8155-4ca0-9d49-a944dd9f715e)
+
+![image](https://github.com/user-attachments/assets/3a5c721c-d94e-4289-b202-191959879c80)
+
+![image](https://github.com/user-attachments/assets/fec3fa5a-cf4f-41bb-809c-6c38335598a1)
 
 <!-- SMART JOURNAL -->
 
