@@ -1,4 +1,8 @@
 
+
+**PLEASE DOWNLOAD AND RUN "Final2.html" file TO RUN THE WEBSITE
+**
+
 AI CHATBOT FOR MENTAL HEALTH BY TEAM MANIAC
 
 Objective:
@@ -67,7 +71,10 @@ SANSKAR JAISWAL
 
 
 
-Uploading Screen Recording 2025-04-05 174314.mp4…
+
+
+
+https://github.com/user-attachments/assets/31a061ba-61cc-4c27-80d6-c2c19f751207
 
 
 
