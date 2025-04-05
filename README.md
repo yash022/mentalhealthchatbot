@@ -60,12 +60,16 @@ TEAM MANIAC:
 YASH SEHGAL
 AAYUSH GARG
 SANSKAR JAISWAL
-- [@octokatherine](https://www.github.com/octokatherine)
+@yash022
 
 
 ## Demo
 
-Insert gif or link to demo
+
+
+Uploading Screen Recording 2025-04-05 174314.mp4…
+
+
 
 
 ## Features
@@ -97,5 +101,6 @@ Backend: Databases, Chatbot: Using Together AI API and JavaScript for SOS (Demo 
 Assessment: Training Using JavaScript
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+[New Microsoft Word Document (2).docx](https://github.com/user-attachments/files/19615275/New.Microsoft.Word.Document.2.docx)
+
 
