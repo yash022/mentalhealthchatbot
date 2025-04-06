@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - MindfulAI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    .container {
+      background-color: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 20px 50px rgba(94, 114, 228, 0.15);
+      width: 90%;
+      max-width: 400px;
+      animation: fadeInUp 0.8s ease;
+    }
+    
+    h2 {
+      color: #1976d2;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    
+    .redirect-btn {
+      margin-top: 1.5rem;
+      background: linear-gradient(135deg, #42a5f5 0%, #1976d2 100%);
+      color: white;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(66, 165, 245, 0.3);
+    }
+    
+    .redirect-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(66, 165, 245, 0.4);
+    }
+    
+    .redirect-btn a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Style for SheetDB form elements */
+    input, select {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      margin: 0.8rem 0;
+      border: 1px solid #e0e6ff;
+      border-radius: 30px;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    
+    input:focus, select:focus {
+      border-color: #a1c4fd;
+      box-shadow: 0 0 0 3px rgba(161, 196, 253, 0.2);
+    }
+    
+    button[type="submit"] {
+      background: linear-gradient(135deg, #42a5f5 0%, #1976d2 100%);
+      color: white;
+      padding: 0.9rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(66, 165, 245, 0.3);
+    }
+    
+    button[type="submit"]:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(66, 165, 245, 0.4);
+    }
+    
+    label {
+      color: #555;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    /* MindfulAI themed container */
+    .container:before {
+      content: '🧠';
+      font-size: 2rem;
+      display: block;
+      text-align: center;
+      margin-bottom: 1rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      line-height: 60px;
+      margin: -50px auto 20px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    
+    .signup-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Join MindfulAI</h2>
+    
+    <!-- Embedded SheetDB Form -->
+    <script src="https://sheetdb.io/s/f/9630jgmf29y4c.js"></script>
+    
+    <!-- Button to go to login page -->
+    <button class="redirect-btn">
+      <a href="login.html">Go to Login</a>
+    </button>
+    
+    <div class="signup-footer">
+      <p>Your journey to better mental wellbeing begins here</p>
+    </div>
+  </div>
+</body>
+</html>

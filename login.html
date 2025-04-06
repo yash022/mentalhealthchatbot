@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - MindfulAI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      color: #555;
+      line-height: 1.6;
+    }
+    
+    .login-container {
+      background-color: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 20px 50px rgba(94, 114, 228, 0.15);
+      width: 90%;
+      max-width: 400px;
+      animation: fadeInUp 0.8s ease;
+    }
+    
+    h2 {
+      color: #1976d2;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    
+    input {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      margin: 0.8rem 0;
+      border: 1px solid #e0e6ff;
+      border-radius: 30px;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    
+    input:focus {
+      border-color: #a1c4fd;
+      box-shadow: 0 0 0 3px rgba(161, 196, 253, 0.2);
+    }
+    
+    button {
+      width: 100%;
+      padding: 0.9rem 1.5rem;
+      margin-top: 1rem;
+      background: linear-gradient(135deg, #42a5f5 0%, #1976d2 100%);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(66, 165, 245, 0.3);
+    }
+    
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(66, 165, 245, 0.4);
+    }
+    
+    .message {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-weight: 500;
+      padding: 0.8rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Additional MindfulAI themed elements */
+    .login-container:before {
+      content: '🧠';
+      font-size: 2rem;
+      display: block;
+      text-align: center;
+      margin-bottom: 1rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      line-height: 60px;
+      margin: -50px auto 20px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    
+    .login-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    
+    .login-footer a {
+      color: #1976d2;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .login-footer a:hover {
+      color: #42a5f5;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to MindfulAI</h2>
+    <input type="text" id="userID" placeholder="Enter ID" required />
+    <input type="password" id="userPASS" placeholder="Enter Password" required />
+    <button onclick="login()">Login</button>
+    <button onclick="window.location.href='signup.html'" style="background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%); margin-top: 0.8rem;">Create Account</button>
+
+    <div class="message" id="message"></div>
+    <div class="login-footer">
+      <p>Your mental wellness companion</p>
+    </div>
+  </div>
+  
+  <script>
+    async function login() {
+      const userPASS = document.getElementById("userID").value;
+      const userID = document.getElementById("userPASS").value;
+      const messageDiv = document.getElementById("message");
+      
+      try {
+        const response = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhUdZTKXCPjarRs8lzS8Vnlx_aQlw-lTx7sdCGXqC1kJTHwN1wz-2nDrwcwMqxb-31kNLKDBqJxes9WrZuWl7YbloLIIYCOP6eb5V79MlQDXXdsAANdign3YXuUWnetr6fecm59lF9GfKjaCkZq98mYiOVvfCq0FcV8Ono4_Pfg65YPHfuqC-U4hw0vHCv0QDWi-eo0KpFiSvp3bskh-9_r317_5BaIyeUDfJmlNcacILLo69dhqCsTFRa_SpmjNfKG2Z9YvVJbR1ry-i9Qh7WRCXtDuGOdP5Vk7JeA&lib=M3k54o7PDuNl2EFPfz21348TfHPk38FQX");
+        const data = await response.json();
+        
+        const match = data.data.find(entry => entry.ID === userID && entry.PASS === userPASS);
+        
+        if (match) {
+          window.location.href = "index.html";
+        } else {
+          messageDiv.textContent = "Invalid ID or Password";
+          messageDiv.style.color = "#f44336";
+          messageDiv.style.backgroundColor = "#ffebee";
+          messageDiv.style.padding = "0.8rem";
+          messageDiv.style.borderRadius = "10px";
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        messageDiv.textContent = "Something went wrong. Try again!";
+        messageDiv.style.color = "#f44336";
+        messageDiv.style.backgroundColor = "#ffebee";
+        messageDiv.style.padding = "0.8rem";
+        messageDiv.style.borderRadius = "10px";
+      }
+    }
+  </script>
+</body>
+</html>
