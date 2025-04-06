@@ -2,7 +2,7 @@
 <h1>**A FULLY FUNCTIONAL WORKING WEBSITE MADE BY TEAM MANIAC
 **</h1>
 
-WEBSITE LINK - https://mentalhealth-ruby.vercel.app/login.html
+WEBSITE LINK - [https://mentalhealth-ruby.vercel.app/login.html](https://mentalhealthchatbot-o6bn.vercel.app/signup.html)
 
 DEMO ID AND PASSWORD FOR LOGIN 
 
